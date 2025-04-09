@@ -8,16 +8,17 @@ let index = 0;
 
 function updateCarousel() {
   if (carousel) {
-    carousel.style.transform = translateX(-${index * 100}%);
+    carousel.style.transform = `translateX(-${index * 100}%)`;
   }
 }
 
 [prev, next].forEach((button, i) => {
   if (button) {
     button.addEventListener("click", () => {
-      index = (i === 0)
-        ? (index - 1 + images.length) % images.length
-        : (index + 1) % images.length;
+      index =
+        i === 0
+          ? (index - 1 + images.length) % images.length
+          : (index + 1) % images.length;
       updateCarousel();
     });
   }
@@ -39,7 +40,9 @@ let currentBackground = 0;
 
 function changeBackground() {
   if (heroSection) {
-    heroSection.style.backgroundImage = url('${backgrounds[currentBackground]}');
+    heroSection.style.backgroundImage = `url(
+      ${backgrounds[currentBackground]}
+    )`;
     currentBackground = (currentBackground + 1) % backgrounds.length;
   }
 }
@@ -75,7 +78,7 @@ if (menuToggle && navMenu) {
   });
 
   // Chiudi menu quando clicchi un link
-  document.querySelectorAll("#nav-menu a").forEach(link => {
+  document.querySelectorAll("#nav-menu a").forEach((link) => {
     link.addEventListener("click", () => {
       if (window.innerWidth <= 940) {
         navMenu.classList.remove("active");
