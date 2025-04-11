@@ -82,6 +82,7 @@ header {
   text-align: center;
   padding: 40px;
   margin-top: 25px;
+  min-height: 350px; /*risolve il problema del box che cambia dimensione*/
 }
 
 .review {
@@ -112,6 +113,7 @@ header {
 #servizi {
   color: black;
   margin: 50px;
+  
 }
 /* Stile per la sezione progetti */
 #progetti {
@@ -324,6 +326,16 @@ nav ul li a:hover {
   border-radius: 5px;
   margin: 10px;
   text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  border: solid 1px;
+}
+.servizio:hover{
+  opacity: 5; /* valore opaco, puoi regolarlo */
+  background-color : #333;
+  transition: 0.3s;
+  border: #c2a965 solid 1px;
+  color: #c2a965;
 }
 
 /* CAROSELLO */
