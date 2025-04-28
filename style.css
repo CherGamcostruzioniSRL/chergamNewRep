@@ -33,14 +33,14 @@ header {
 /* Nascondi l'icona hamburger su desktop */
 .menu-toggle {
   display: none;
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
   color: #c2a965;
 }
 .menu-toggle:hover {
-  color: white;
+  color: #c2a9657e;
   transition: 0.5s;
-  transform: scale(1.15);
+  transform: scale(0.7);
 }
 nav ul {
   list-style: none;
@@ -87,7 +87,7 @@ nav ul li:hover > a {
   font-size: 16px;
   padding: 10px;
   display: block;
-  color: white;
+  color: #c2a965;
   text-align: center;
   transition: background 0.3s;
 }
